@@ -3,6 +3,8 @@ import mediapipe as mp
 
 
 cap = cv2.VideoCapture(0)
+cap.set(3, 480)
+cap.set(4, 640)
 
 mpHands = mp.solutions.hands
 hands = mpHands.Hands()
@@ -27,7 +29,7 @@ while True:
     
     if len(mpList) != 0:
         
-        if mpList[4][1] > mpList[20][1]:
+        if mpList[12][1] > mpList[20][1]:
                 cv2.putText(img, str("Right Hand"), (35, 125), cv2.FONT_HERSHEY_PLAIN, 5, (255, 0, 0), 5)
         else:
                 cv2.putText(img, str("Left Hand"), (35, 125), cv2.FONT_HERSHEY_PLAIN, 5, (255, 0, 0), 5)

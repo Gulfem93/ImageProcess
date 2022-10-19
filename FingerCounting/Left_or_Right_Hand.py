@@ -28,9 +28,9 @@ while True:
     if len(mpList) != 0:
         
         if mpList[4][1] > mpList[20][1]:
-                cv2.putText(img, str("Sag El"), (35, 125), cv2.FONT_HERSHEY_PLAIN, 5, (255, 0, 0), 5)
+                cv2.putText(img, str("Right Hand"), (35, 125), cv2.FONT_HERSHEY_PLAIN, 5, (255, 0, 0), 5)
         else:
-                cv2.putText(img, str("Sol El"), (35, 125), cv2.FONT_HERSHEY_PLAIN, 5, (255, 0, 0), 5)
+                cv2.putText(img, str("Left Hand"), (35, 125), cv2.FONT_HERSHEY_PLAIN, 5, (255, 0, 0), 5)
         
     
     cv2.imshow("img", img)
